@@ -30,7 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\NameNumerizer\README.md">
+    <None Include="..\..\ShoutStats\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
