@@ -22,20 +22,32 @@
  * SOFTWARE.
  */
 
+using System;
+
 namespace ShoutStats.Core
 {
     /// <summary>
-    /// Enumeration for the Shoutcast version
+    /// Happens when the error in parsing the stream has occurred
     /// </summary>
-    public enum ShoutcastVersion
+    public class ShoutcastStreamParseException : Exception
     {
         /// <summary>
-        /// Shoutcast version 1.x
+        /// Throws the stream parse exception
         /// </summary>
-        v1,
+        public ShoutcastStreamParseException() { }
         /// <summary>
-        /// Shoutcast version 2.x
+        /// Throws the stream parse exception
         /// </summary>
-        v2
+        public ShoutcastStreamParseException(string message) : base(message) { }
+        /// <summary>
+        /// Throws the stream parse exception
+        /// </summary>
+        public ShoutcastStreamParseException(string message, Exception inner) : base(message, inner) { }
+        /// <summary>
+        /// Throws the stream parse exception
+        /// </summary>
+        protected ShoutcastStreamParseException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }

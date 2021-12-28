@@ -22,20 +22,32 @@
  * SOFTWARE.
  */
 
+using System;
+
 namespace ShoutStats.Core
 {
     /// <summary>
-    /// Enumeration for the Shoutcast version
+    /// Happens when the error in the server has occurred
     /// </summary>
-    public enum ShoutcastVersion
+    public class ShoutcastServerException : Exception
     {
         /// <summary>
-        /// Shoutcast version 1.x
+        /// Throws the server exception
         /// </summary>
-        v1,
+        public ShoutcastServerException() { }
         /// <summary>
-        /// Shoutcast version 2.x
+        /// Throws the server exception
         /// </summary>
-        v2
+        public ShoutcastServerException(string message) : base(message) { }
+        /// <summary>
+        /// Throws the server exception
+        /// </summary>
+        public ShoutcastServerException(string message, Exception inner) : base(message, inner) { }
+        /// <summary>
+        /// Throws the server exception
+        /// </summary>
+        protected ShoutcastServerException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }
