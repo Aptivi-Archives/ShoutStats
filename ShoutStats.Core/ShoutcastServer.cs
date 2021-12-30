@@ -43,9 +43,9 @@ namespace ShoutStats.Core
         private int maxListeners;
         private int uniqueListeners;
         private int averageTime;
-        private List<StreamInfo> streams = new();
+        private List<StreamInfo> streams = new List<StreamInfo>();
         internal JToken streamToken;
-        internal HtmlDocument streamHtmlToken = new();
+        internal HtmlDocument streamHtmlToken = new HtmlDocument();
 
         /// <summary>
         /// Server IP address

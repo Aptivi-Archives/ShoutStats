@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net6.0;net5.0;net48</TargetFrameworks>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>ShoutStats can display status for Shoutcast servers. Both v1 and v2 are compatible</Description>
@@ -10,11 +10,11 @@
     <RepositoryUrl>https://github.com/EoflaOE/ShoutStats</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>shoutcast;library;audio;radio;fm;server;statistics;status;stats</PackageTags>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
+    <AssemblyVersion>0.1.0.1</AssemblyVersion>
+    <FileVersion>0.1.0.1</FileVersion>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.1.0</Version>
+    <Version>0.1.0.1</Version>
     <Authors>EoflaOE</Authors>
     <Company>EoflaOE</Company>
     <Product>ShoutStats</Product>
