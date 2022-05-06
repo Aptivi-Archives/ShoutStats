@@ -2,10 +2,15 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>OfficialAppIcon-ShoutStats.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="OfficialAppIcon-ShoutStats.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ShoutStats.Core\ShoutStats.Core.csproj" />

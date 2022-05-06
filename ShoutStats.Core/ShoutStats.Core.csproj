@@ -14,11 +14,13 @@
     <FileVersion>0.1.0.1</FileVersion>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>0.1.0.1</Version>
+    <Version>0.1.0.2</Version>
     <Authors>EoflaOE</Authors>
     <Company>EoflaOE</Company>
     <Product>ShoutStats</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <ApplicationIcon>OfficialAppIcon-ShoutStats.ico</ApplicationIcon>
+    <PackageIcon>OfficialAppIcon-ShoutStats-512.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -30,6 +32,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="OfficialAppIcon-ShoutStats.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\..\ShoutStats\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -39,6 +45,13 @@
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.36" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="OfficialAppIcon-ShoutStats-512.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
