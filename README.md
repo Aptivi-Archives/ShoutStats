@@ -7,7 +7,7 @@ You can install it to any program, conforming that you'll agree to the license b
 ### License
 
 ```
-Copyright (c) 2021 EoflaOE and its companies
+Copyright (c) 2021 Aptivi
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

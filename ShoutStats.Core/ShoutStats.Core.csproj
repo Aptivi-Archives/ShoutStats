@@ -5,9 +5,9 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Description>ShoutStats can display status for Shoutcast servers. Both v1 and v2 are compatible</Description>
-    <Copyright>Copyright (c) 2021 EoflaOE and its companies</Copyright>
-    <PackageProjectUrl>https://github.com/EoflaOE/ShoutStats</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/EoflaOE/ShoutStats</RepositoryUrl>
+    <Copyright>Copyright (c) 2021 Aptivi</Copyright>
+    <PackageProjectUrl>https://github.com/Aptivi/ShoutStats</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Aptivi/ShoutStats</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>shoutcast;library;audio;radio;fm;server;statistics;status;stats</PackageTags>
     <AssemblyVersion>0.1.0.2</AssemblyVersion>
@@ -15,8 +15,8 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Version>0.1.0.2</Version>
-    <Authors>EoflaOE</Authors>
-    <Company>EoflaOE</Company>
+    <Authors>Aptivi</Authors>
+    <Company>Aptivi</Company>
     <Product>ShoutStats</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <ApplicationIcon>OfficialAppIcon-ShoutStats.ico</ApplicationIcon>
