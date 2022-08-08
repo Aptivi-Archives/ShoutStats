@@ -1,4 +1,7 @@
 {
+  "sitemap": {
+    "baseUrl": "https://aptivi.github.io/ShoutStats/"
+  },
   "homepages": [],
   "source_base_path": "/github/workspace/DocGen",
   "xrefmap": "xrefmap.yml",
@@ -18,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastServer.html",
-          "hash": "xgRkslJnWbd1dC+kE7A5V4HZRa6v9QpRfyFoD4q8cUc="
+          "hash": "w2NkzC6G6HZB+YwEeutF7H9w+dFDPSWghC/aOPY0P8c="
         }
       },
       "is_incremental": false,
@@ -30,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastServerException.html",
-          "hash": "TyklQ4xnrrKFwmbXJck6Cje8A4SeMZJvxhMzyxp/10I="
+          "hash": "cI76HhKW0Lpjd44CRtWytcf+4sKgO4ZUsHLLg2UxYEY="
         }
       },
       "is_incremental": false,
@@ -42,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastStreamParseException.html",
-          "hash": "Iu2U1H5mxgWOPtxRMx4FFZDonR0gEqoxjuQgVdjkQ2I="
+          "hash": "gBl/qu+FjiUaa5+AOAtCydRInyywl90jpnp/XK/DsS0="
         }
       },
       "is_incremental": false,
@@ -54,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastVersion.html",
-          "hash": "l7LEIOeJuVbiGk8UWmna0pPzFcU4TbUDejJKcJt9p84="
+          "hash": "uJ+Hihqb+HjZinJLMuqpQn91G19VHiWHcC9C+Soc8Uw="
         }
       },
       "is_incremental": false,
@@ -66,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.StreamInfo.html",
-          "hash": "Uds8FnIu+WjTPajMjFIzPRq8icgSdG9c+mhfIqJpvMM="
+          "hash": "hjuZFFo0OVzm5JglMBW6Xa4NCO8h0Ksciwo4GEKQBUs="
         }
       },
       "is_incremental": false,
@@ -102,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "pJ1BCUTKMz2WbRAfF+YL5tOMuAvkIikk1NDHIJ5zXCw="
+          "hash": "4+kqL/I8+SdPUyISLfLk4iylydJnnMYe9PYY8XTfVz0="
         }
       },
       "is_incremental": false,
