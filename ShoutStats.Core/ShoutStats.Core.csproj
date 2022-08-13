@@ -19,22 +19,10 @@
     <Company>Aptivi</Company>
     <Product>ShoutStats</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <ApplicationIcon>OfficialAppIcon-ShoutStats.ico</ApplicationIcon>
     <PackageIcon>OfficialAppIcon-ShoutStats-512.png</PackageIcon>
     <PackageVersion>0.1.0.2</PackageVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="OfficialAppIcon-ShoutStats.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\ShoutStats\README.md">
