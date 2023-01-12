@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastServer.html",
-          "hash": "w2NkzC6G6HZB+YwEeutF7H9w+dFDPSWghC/aOPY0P8c="
+          "hash": "oiXiWnK9FThLi+MOlEHhSL0pZLmC6j5dRB7NVdHyhqU="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastServerException.html",
-          "hash": "cI76HhKW0Lpjd44CRtWytcf+4sKgO4ZUsHLLg2UxYEY="
+          "hash": "NqZ+MH8evhKRxekFAKFjX4KrwrE6dn/icfaReRFLBks="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastStreamParseException.html",
-          "hash": "gBl/qu+FjiUaa5+AOAtCydRInyywl90jpnp/XK/DsS0="
+          "hash": "hriaAmWYS3+bcIK29pANrNLR6QcFDqWvvuASIJYILvE="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.ShoutcastVersion.html",
-          "hash": "uJ+Hihqb+HjZinJLMuqpQn91G19VHiWHcC9C+Soc8Uw="
+          "hash": "Fa9/dHDQuqjCCNGWgBMKwC5//wgYpt4FxSA9TTJWoF8="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ShoutStats.Core.StreamInfo.html",
-          "hash": "hjuZFFo0OVzm5JglMBW6Xa4NCO8h0Ksciwo4GEKQBUs="
+          "hash": "yJq/3yYiAP3rIeLDDnh+dpxHrzmKxtkxAPUtUofZkgU="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "4+kqL/I8+SdPUyISLfLk4iylydJnnMYe9PYY8XTfVz0="
+          "hash": "NahN0TNHZAX4P3nNfKgzFynbKk2APAAWGPBS+EfCynU="
         }
       },
       "is_incremental": false,
