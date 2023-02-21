@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ShoutStats.UI.MainWindow"
+        Title="ShoutStats"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True">
+  <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="2.0*,1.0*,0.4*,Auto" Margin="30">
+    <TextBlock Name="stats" Grid.Row="0" Grid.Column="0" Text="Showing statistics for"></TextBlock>
+    <TextBox Name="statsURL" Grid.Row="0" Grid.Column="1" Watermark="Stream address (+ = secure)"></TextBox>
+    <TextBox Name="statsPort" Grid.Row="0" Grid.Column="2" MaxLength="5" Watermark="Port"></TextBox>
+    <Button Name="change" Grid.Row="0" Grid.Column="3" Command="{Binding PopulateData}">Change</Button>
+    <TabControl Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4">
+      <TabItem Header="Server">
+        <StackPanel>
+          <TextBlock Name="ServerInfo" Text=""></TextBlock>
+        </StackPanel>
+      </TabItem>
+      <TabItem Header="Stream">
+        <StackPanel>
+          <ComboBox Name="StreamCombo" SelectedItem="{Binding SelectedStream}"></ComboBox>
+          <TextBlock Name="StreamInfo" Text=""></TextBlock>
+        </StackPanel>
+      </TabItem>
+    </TabControl>
+  </Grid>
+</Window>

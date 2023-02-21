@@ -1,4 +1,4 @@
-/*
+﻿/*
  * MIT License
  * 
  * Copyright (c) 2021 Aptivi
@@ -22,26 +22,29 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Avalonia.Controls;
 
-namespace ShoutStats.WindowsUI
+namespace ShoutStats.UI
 {
-    static class Program
+    public partial class DialogBoxWindow : Window
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        public DialogBoxWindow()
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StatsUI());
+            DataContext = new DialogInfo(this);
+            InitializeComponent();
+        }
+    }
+
+    public class DialogInfo
+    {
+        private Window view;
+        public void Close()
+        {
+            view.Close();
+        }
+        public DialogInfo(Window view)
+        {
+            this.view = view;
         }
     }
 }
