@@ -6,6 +6,7 @@
     <TrimMode>copyused</TrimMode>
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationIcon>..\ShoutStats.Console\OfficialAppIcon-ShoutStats.ico</ApplicationIcon>
+    <Version>0.1.0.4</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Remove=".gitignore" />
