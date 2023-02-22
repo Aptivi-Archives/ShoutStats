@@ -21,8 +21,11 @@
       </TabItem>
       <TabItem Header="Stream">
         <StackPanel>
-          <ComboBox Name="StreamCombo" SelectedItem="{Binding SelectedStream}"></ComboBox>
-          <TextBlock Name="StreamInfo" Text=""></TextBlock>
+          <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto">
+            <ComboBox Name="StreamCombo" Grid.Row="0" Grid.Column="0" SelectedItem="{Binding SelectedStream}"></ComboBox>
+            <Button Name="refresh" Grid.Row="0" Grid.Column="1" Command="{Binding PopulateData}">Refresh</Button>
+            <TextBlock Name="StreamInfo" Grid.Row="1" Grid.Column="0" Text=""></TextBlock>
+          </Grid>
         </StackPanel>
       </TabItem>
     </TabControl>

@@ -72,7 +72,8 @@ namespace ShoutStats.UI
 
                 // Get streams
                 streams = shout.Streams;
-                thisView.StreamCombo.Items = streams.Select((si) => si.StreamId);
+                thisView.StreamCombo.Items = streams.Select((si) => $"{si.StreamId} - {si.StreamTitle}");
+                thisView.StreamCombo.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -87,7 +88,8 @@ namespace ShoutStats.UI
             get { return selectedStream; }
             set
             {
-                GetStreamInfo(value);
+                if (!string.IsNullOrEmpty(value))
+                    GetStreamInfo(value[..value.IndexOf(" ")]);
                 selectedStream = value;
             }
         }
