@@ -27,6 +27,7 @@ using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json.Linq;
 using HtmlAgilityPack;
+using System.Net.Http;
 
 namespace ShoutStats.Core
 {
@@ -46,6 +47,7 @@ namespace ShoutStats.Core
         private List<StreamInfo> streams = new List<StreamInfo>();
         internal JToken streamToken;
         internal HtmlDocument streamHtmlToken = new HtmlDocument();
+        internal HttpClient client = new HttpClient();
 
         /// <summary>
         /// Server IP address
@@ -139,22 +141,21 @@ namespace ShoutStats.Core
         /// </summary>
         public void Refresh()
         {
-                try
-                {
+            try
+            {
                 // Use the full address to download the statistics. Note that Shoutcast v2 streams will use the /statistics directory, which provides
                 // more information than /7.html. If we're dealing with the first version, or if /statistics is disabled for some reason, fallback to
                 // /7.html
                 Uri statisticsUri = new Uri(ServerHostFull + "/statistics?json=1");
                 Uri fallbackUri = new Uri(ServerHostFull + "/7.html");
-                WebClient serverClient = new WebClient();
-                string serverResponse = serverClient.DownloadString(statisticsUri);
+                string serverResponse = client.GetStringAsync(statisticsUri).Result;
 
                 // Shoutcast v1.x doesn't have /statistics...
                 if (serverResponse.Contains("Invalid resource"))
                 {
                     // Detected v1. Fallback to /7.html
                     serverVersion = ShoutcastVersion.v1;
-                    serverResponse = serverClient.DownloadString(fallbackUri);
+                    serverResponse = client.GetStringAsync(fallbackUri).Result;
                     streamHtmlToken.LoadHtml(serverResponse);
                 }
                 else
