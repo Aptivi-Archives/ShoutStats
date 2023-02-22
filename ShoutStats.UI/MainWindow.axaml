@@ -24,7 +24,7 @@
           <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto">
             <ComboBox Name="StreamCombo" Grid.Row="0" Grid.Column="0" SelectedItem="{Binding SelectedStream}"></ComboBox>
             <Button Name="refresh" Grid.Row="0" Grid.Column="1" Command="{Binding PopulateData}">Refresh</Button>
-            <TextBlock Name="StreamInfo" Grid.Row="1" Grid.Column="0" Text=""></TextBlock>
+            <TextBlock Name="StreamInfo" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text=""></TextBlock>
           </Grid>
         </StackPanel>
       </TabItem>
