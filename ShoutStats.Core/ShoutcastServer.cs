@@ -28,6 +28,7 @@ using System.Net;
 using Newtonsoft.Json.Linq;
 using HtmlAgilityPack;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace ShoutStats.Core
 {
@@ -131,9 +132,6 @@ namespace ShoutStats.Core
             // Install the values initially
             ServerPort = serverPort;
             serverVersion = ShoutcastVersion.v2;
-
-            // Call Refresh() to get information about stream
-            Refresh();
         }
 
         /// <summary>
@@ -165,46 +163,91 @@ namespace ShoutStats.Core
 
                 // Determine version of Shoutcast
                 if (serverVersion == ShoutcastVersion.v1)
-                {
-                    // Shoutcast version v1.x, so use the html fallback token. Response values are as follows:
-                    // currentlisteners,streamstatus(S),peaklisteners,maxlisteners,uniquelisteners,bitrate(S),songtitle(S)
-                    // First, deal with the server settings.
-                    string[] response = streamHtmlToken.DocumentNode.SelectSingleNode("body").InnerText.Split(',');
-                    currentListeners = Convert.ToInt32(response[0]);
-                    peakListeners = Convert.ToInt32(response[2]);
-                    maxListeners = Convert.ToInt32(response[3]);
-                    uniqueListeners = Convert.ToInt32(response[4]);
-
-                    // Then, deal with the stream settings
-                    StreamInfo streamInfo = new StreamInfo(this, null);
-                    streams.Clear();
-                    streams.Add(streamInfo);
-                }
+                    FinalizeShoutcastV1();
                 else
-                {
-                    // Shoutcast version v2.x, so use the JToken.
-                    // Use all the keys in the first object except the "streams" and "version", where we'd later use the former in StreamInfo to install
-                    // all the streams into the new class instance.
-                    totalStreams = (int)streamToken["totalstreams"];
-                    activeStreams = (int)streamToken["activestreams"];
-                    currentListeners = (int)streamToken["currentlisteners"];
-                    peakListeners = (int)streamToken["peaklisteners"];
-                    maxListeners = (int)streamToken["maxlisteners"];
-                    uniqueListeners = (int)streamToken["uniquelisteners"];
-                    averageTime = (int)streamToken["averagetime"];
-
-                    // Now, deal with the stream settings.
-                    streams.Clear();
-                    foreach (JToken stream in streamToken["streams"])
-                    {
-                        StreamInfo streamInfo = new StreamInfo(this, stream);
-                        streams.Add(streamInfo);
-                    }
-                }
+                    FinalizeShoutcastV2();
             }
             catch (Exception ex)
             {
                 throw new ShoutcastServerException($"Failed to parse Shoutcast server {ServerHost}. More information can be found in the inner exception.", ex);
+            }
+        }
+
+        /// <summary>
+        /// Refreshes the statistics
+        /// </summary>
+        public async Task RefreshAsync()
+        {
+            try
+            {
+                // Use the full address to download the statistics. Note that Shoutcast v2 streams will use the /statistics directory, which provides
+                // more information than /7.html. If we're dealing with the first version, or if /statistics is disabled for some reason, fallback to
+                // /7.html
+                Uri statisticsUri = new Uri(ServerHostFull + "/statistics?json=1");
+                Uri fallbackUri = new Uri(ServerHostFull + "/7.html");
+                string serverResponse = await client.GetStringAsync(statisticsUri);
+
+                // Shoutcast v1.x doesn't have /statistics...
+                if (serverResponse.Contains("Invalid resource"))
+                {
+                    // Detected v1. Fallback to /7.html
+                    serverVersion = ShoutcastVersion.v1;
+                    serverResponse = await client.GetStringAsync(fallbackUri);
+                    streamHtmlToken.LoadHtml(serverResponse);
+                }
+                else
+                {
+                    streamToken = JToken.Parse(serverResponse);
+                }
+
+                // Determine version of Shoutcast
+                if (serverVersion == ShoutcastVersion.v1)
+                    FinalizeShoutcastV1();
+                else
+                    FinalizeShoutcastV2();
+            }
+            catch (Exception ex)
+            {
+                throw new ShoutcastServerException($"Failed to parse Shoutcast server {ServerHost}. More information can be found in the inner exception.", ex);
+            }
+        }
+
+        internal void FinalizeShoutcastV1()
+        {
+            // Shoutcast version v1.x, so use the html fallback token. Response values are as follows:
+            // currentlisteners,streamstatus(S),peaklisteners,maxlisteners,uniquelisteners,bitrate(S),songtitle(S)
+            // First, deal with the server settings.
+            string[] response = streamHtmlToken.DocumentNode.SelectSingleNode("body").InnerText.Split(',');
+            currentListeners = Convert.ToInt32(response[0]);
+            peakListeners = Convert.ToInt32(response[2]);
+            maxListeners = Convert.ToInt32(response[3]);
+            uniqueListeners = Convert.ToInt32(response[4]);
+
+            // Then, deal with the stream settings
+            StreamInfo streamInfo = new StreamInfo(this, null);
+            streams.Clear();
+            streams.Add(streamInfo);
+        }
+
+        internal void FinalizeShoutcastV2()
+        {
+            // Shoutcast version v2.x, so use the JToken.
+            // Use all the keys in the first object except the "streams" and "version", where we'd later use the former in StreamInfo to install
+            // all the streams into the new class instance.
+            totalStreams = (int)streamToken["totalstreams"];
+            activeStreams = (int)streamToken["activestreams"];
+            currentListeners = (int)streamToken["currentlisteners"];
+            peakListeners = (int)streamToken["peaklisteners"];
+            maxListeners = (int)streamToken["maxlisteners"];
+            uniqueListeners = (int)streamToken["uniquelisteners"];
+            averageTime = (int)streamToken["averagetime"];
+
+            // Now, deal with the stream settings.
+            streams.Clear();
+            foreach (JToken stream in streamToken["streams"])
+            {
+                StreamInfo streamInfo = new StreamInfo(this, stream);
+                streams.Add(streamInfo);
             }
         }
     }

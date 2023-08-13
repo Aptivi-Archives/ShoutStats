@@ -25,6 +25,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Avalonia.Controls;
 using ShoutStats.Core;
 
@@ -46,7 +47,7 @@ namespace ShoutStats.UI
         private ShoutcastServer shout;
         private string selectedStream;
 
-        public void PopulateData()
+        public async Task PopulateDataAsync()
         {
             try
             {
@@ -55,6 +56,7 @@ namespace ShoutStats.UI
                 string shoutUrl = thisView.statsURL.Text.TrimStart('+');
                 int shoutPort = Convert.ToInt32(thisView.statsPort.Text);
                 shout = new ShoutcastServer(shoutUrl, shoutPort, secure);
+                await shout.RefreshAsync();
 
                 // Populate server info
                 thisView.stats.Text = $"Showing statistics for {shout.ServerHostFull}";

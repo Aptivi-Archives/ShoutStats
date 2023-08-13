@@ -12,7 +12,7 @@
     <TextBlock Name="stats" Grid.Row="0" Grid.Column="0" Text="Showing statistics for"></TextBlock>
     <TextBox Name="statsURL" Grid.Row="0" Grid.Column="1" Watermark="Stream address (+ = secure)"></TextBox>
     <TextBox Name="statsPort" Grid.Row="0" Grid.Column="2" MaxLength="5" Watermark="Port"></TextBox>
-    <Button Name="change" Grid.Row="0" Grid.Column="3" Command="{Binding PopulateData}">Change</Button>
+    <Button Name="change" Grid.Row="0" Grid.Column="3" Command="{Binding PopulateDataAsync}">Change</Button>
     <TabControl Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4">
       <TabItem Header="Server">
         <StackPanel>
@@ -23,7 +23,7 @@
         <StackPanel>
           <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,Auto">
             <ComboBox Name="StreamCombo" Grid.Row="0" Grid.Column="0" SelectedItem="{Binding SelectedStream}"></ComboBox>
-            <Button Name="refresh" Grid.Row="0" Grid.Column="1" Command="{Binding PopulateData}">Refresh</Button>
+            <Button Name="refresh" Grid.Row="0" Grid.Column="1" Command="{Binding PopulateDataAsync}">Refresh</Button>
             <TextBlock Name="StreamInfo" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text=""></TextBlock>
           </Grid>
         </StackPanel>

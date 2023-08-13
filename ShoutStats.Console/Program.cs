@@ -48,6 +48,7 @@ namespace ShoutStats.Console
 
                     // Get the stream info
                     ShoutcastServer ParsedServer = new(Address, Port, UseSecure);
+                    ParsedServer.Refresh();
 
                     // Print the server information
                     Terminal.WriteLine($"Host: {ParsedServer.ServerHost}");
