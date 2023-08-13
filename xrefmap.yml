@@ -117,6 +117,19 @@ references:
   isSpec: "True"
   fullName: ShoutStats.Core.ShoutcastServer.Refresh
   nameWithType: ShoutcastServer.Refresh
+- uid: ShoutStats.Core.ShoutcastServer.RefreshAsync
+  name: RefreshAsync()
+  href: api/ShoutStats.Core.ShoutcastServer.html#ShoutStats_Core_ShoutcastServer_RefreshAsync
+  commentId: M:ShoutStats.Core.ShoutcastServer.RefreshAsync
+  fullName: ShoutStats.Core.ShoutcastServer.RefreshAsync()
+  nameWithType: ShoutcastServer.RefreshAsync()
+- uid: ShoutStats.Core.ShoutcastServer.RefreshAsync*
+  name: RefreshAsync
+  href: api/ShoutStats.Core.ShoutcastServer.html#ShoutStats_Core_ShoutcastServer_RefreshAsync_
+  commentId: Overload:ShoutStats.Core.ShoutcastServer.RefreshAsync
+  isSpec: "True"
+  fullName: ShoutStats.Core.ShoutcastServer.RefreshAsync
+  nameWithType: ShoutcastServer.RefreshAsync
 - uid: ShoutStats.Core.ShoutcastServer.ServerHost
   name: ServerHost
   href: api/ShoutStats.Core.ShoutcastServer.html#ShoutStats_Core_ShoutcastServer_ServerHost
