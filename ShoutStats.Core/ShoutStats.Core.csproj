@@ -14,6 +14,7 @@
     <FileVersion>0.2.0</FileVersion>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>True</IncludeSymbols>
     <Version>0.2.0</Version>
     <Authors>Aptivi</Authors>
     <Company>Aptivi</Company>
