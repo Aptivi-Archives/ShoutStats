@@ -14,18 +14,24 @@ references:
   fullName: ShoutStats.Core.ShoutcastServer
   nameWithType: ShoutcastServer
 - uid: ShoutStats.Core.ShoutcastServer.#ctor(System.String,System.Int32,System.Boolean)
-  name: ShoutcastServer(String, Int32, Boolean)
+  name: ShoutcastServer(string, int, bool)
   href: api/ShoutStats.Core.ShoutcastServer.html#ShoutStats_Core_ShoutcastServer__ctor_System_String_System_Int32_System_Boolean_
   commentId: M:ShoutStats.Core.ShoutcastServer.#ctor(System.String,System.Int32,System.Boolean)
-  fullName: ShoutStats.Core.ShoutcastServer.ShoutcastServer(System.String, System.Int32, System.Boolean)
-  nameWithType: ShoutcastServer.ShoutcastServer(String, Int32, Boolean)
+  name.vb: New(String, Integer, Boolean)
+  fullName: ShoutStats.Core.ShoutcastServer.ShoutcastServer(string, int, bool)
+  fullName.vb: ShoutStats.Core.ShoutcastServer.New(String, Integer, Boolean)
+  nameWithType: ShoutcastServer.ShoutcastServer(string, int, bool)
+  nameWithType.vb: ShoutcastServer.New(String, Integer, Boolean)
 - uid: ShoutStats.Core.ShoutcastServer.#ctor*
   name: ShoutcastServer
   href: api/ShoutStats.Core.ShoutcastServer.html#ShoutStats_Core_ShoutcastServer__ctor_
   commentId: Overload:ShoutStats.Core.ShoutcastServer.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: ShoutStats.Core.ShoutcastServer.ShoutcastServer
+  fullName.vb: ShoutStats.Core.ShoutcastServer.New
   nameWithType: ShoutcastServer.ShoutcastServer
+  nameWithType.vb: ShoutcastServer.New
 - uid: ShoutStats.Core.ShoutcastServer.ActiveStreams
   name: ActiveStreams
   href: api/ShoutStats.Core.ShoutcastServer.html#ShoutStats_Core_ShoutcastServer_ActiveStreams
@@ -244,33 +250,48 @@ references:
   name: ShoutcastServerException()
   href: api/ShoutStats.Core.ShoutcastServerException.html#ShoutStats_Core_ShoutcastServerException__ctor
   commentId: M:ShoutStats.Core.ShoutcastServerException.#ctor
+  name.vb: New()
   fullName: ShoutStats.Core.ShoutcastServerException.ShoutcastServerException()
+  fullName.vb: ShoutStats.Core.ShoutcastServerException.New()
   nameWithType: ShoutcastServerException.ShoutcastServerException()
+  nameWithType.vb: ShoutcastServerException.New()
 - uid: ShoutStats.Core.ShoutcastServerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: ShoutcastServerException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  name: ShoutcastServerException(SerializationInfo, StreamingContext)
   href: api/ShoutStats.Core.ShoutcastServerException.html#ShoutStats_Core_ShoutcastServerException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
   commentId: M:ShoutStats.Core.ShoutcastServerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: New(SerializationInfo, StreamingContext)
   fullName: ShoutStats.Core.ShoutcastServerException.ShoutcastServerException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: ShoutcastServerException.ShoutcastServerException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: ShoutStats.Core.ShoutcastServerException.New(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: ShoutcastServerException.ShoutcastServerException(SerializationInfo, StreamingContext)
+  nameWithType.vb: ShoutcastServerException.New(SerializationInfo, StreamingContext)
 - uid: ShoutStats.Core.ShoutcastServerException.#ctor(System.String)
-  name: ShoutcastServerException(String)
+  name: ShoutcastServerException(string)
   href: api/ShoutStats.Core.ShoutcastServerException.html#ShoutStats_Core_ShoutcastServerException__ctor_System_String_
   commentId: M:ShoutStats.Core.ShoutcastServerException.#ctor(System.String)
-  fullName: ShoutStats.Core.ShoutcastServerException.ShoutcastServerException(System.String)
-  nameWithType: ShoutcastServerException.ShoutcastServerException(String)
-- uid: ShoutStats.Core.ShoutcastServerException.#ctor(System.String,Exception)
-  name: ShoutcastServerException(String, Exception)
-  href: api/ShoutStats.Core.ShoutcastServerException.html#ShoutStats_Core_ShoutcastServerException__ctor_System_String_Exception_
-  commentId: M:ShoutStats.Core.ShoutcastServerException.#ctor(System.String,Exception)
-  fullName: ShoutStats.Core.ShoutcastServerException.ShoutcastServerException(System.String, Exception)
-  nameWithType: ShoutcastServerException.ShoutcastServerException(String, Exception)
+  name.vb: New(String)
+  fullName: ShoutStats.Core.ShoutcastServerException.ShoutcastServerException(string)
+  fullName.vb: ShoutStats.Core.ShoutcastServerException.New(String)
+  nameWithType: ShoutcastServerException.ShoutcastServerException(string)
+  nameWithType.vb: ShoutcastServerException.New(String)
+- uid: ShoutStats.Core.ShoutcastServerException.#ctor(System.String,System.Exception)
+  name: ShoutcastServerException(string, Exception)
+  href: api/ShoutStats.Core.ShoutcastServerException.html#ShoutStats_Core_ShoutcastServerException__ctor_System_String_System_Exception_
+  commentId: M:ShoutStats.Core.ShoutcastServerException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: ShoutStats.Core.ShoutcastServerException.ShoutcastServerException(string, System.Exception)
+  fullName.vb: ShoutStats.Core.ShoutcastServerException.New(String, System.Exception)
+  nameWithType: ShoutcastServerException.ShoutcastServerException(string, Exception)
+  nameWithType.vb: ShoutcastServerException.New(String, Exception)
 - uid: ShoutStats.Core.ShoutcastServerException.#ctor*
   name: ShoutcastServerException
   href: api/ShoutStats.Core.ShoutcastServerException.html#ShoutStats_Core_ShoutcastServerException__ctor_
   commentId: Overload:ShoutStats.Core.ShoutcastServerException.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: ShoutStats.Core.ShoutcastServerException.ShoutcastServerException
+  fullName.vb: ShoutStats.Core.ShoutcastServerException.New
   nameWithType: ShoutcastServerException.ShoutcastServerException
+  nameWithType.vb: ShoutcastServerException.New
 - uid: ShoutStats.Core.ShoutcastStreamParseException
   name: ShoutcastStreamParseException
   href: api/ShoutStats.Core.ShoutcastStreamParseException.html
@@ -281,33 +302,48 @@ references:
   name: ShoutcastStreamParseException()
   href: api/ShoutStats.Core.ShoutcastStreamParseException.html#ShoutStats_Core_ShoutcastStreamParseException__ctor
   commentId: M:ShoutStats.Core.ShoutcastStreamParseException.#ctor
+  name.vb: New()
   fullName: ShoutStats.Core.ShoutcastStreamParseException.ShoutcastStreamParseException()
+  fullName.vb: ShoutStats.Core.ShoutcastStreamParseException.New()
   nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException()
+  nameWithType.vb: ShoutcastStreamParseException.New()
 - uid: ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: ShoutcastStreamParseException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  name: ShoutcastStreamParseException(SerializationInfo, StreamingContext)
   href: api/ShoutStats.Core.ShoutcastStreamParseException.html#ShoutStats_Core_ShoutcastStreamParseException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
   commentId: M:ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: New(SerializationInfo, StreamingContext)
   fullName: ShoutStats.Core.ShoutcastStreamParseException.ShoutcastStreamParseException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: ShoutStats.Core.ShoutcastStreamParseException.New(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException(SerializationInfo, StreamingContext)
+  nameWithType.vb: ShoutcastStreamParseException.New(SerializationInfo, StreamingContext)
 - uid: ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.String)
-  name: ShoutcastStreamParseException(String)
+  name: ShoutcastStreamParseException(string)
   href: api/ShoutStats.Core.ShoutcastStreamParseException.html#ShoutStats_Core_ShoutcastStreamParseException__ctor_System_String_
   commentId: M:ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.String)
-  fullName: ShoutStats.Core.ShoutcastStreamParseException.ShoutcastStreamParseException(System.String)
-  nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException(String)
-- uid: ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.String,Exception)
-  name: ShoutcastStreamParseException(String, Exception)
-  href: api/ShoutStats.Core.ShoutcastStreamParseException.html#ShoutStats_Core_ShoutcastStreamParseException__ctor_System_String_Exception_
-  commentId: M:ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.String,Exception)
-  fullName: ShoutStats.Core.ShoutcastStreamParseException.ShoutcastStreamParseException(System.String, Exception)
-  nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException(String, Exception)
+  name.vb: New(String)
+  fullName: ShoutStats.Core.ShoutcastStreamParseException.ShoutcastStreamParseException(string)
+  fullName.vb: ShoutStats.Core.ShoutcastStreamParseException.New(String)
+  nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException(string)
+  nameWithType.vb: ShoutcastStreamParseException.New(String)
+- uid: ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.String,System.Exception)
+  name: ShoutcastStreamParseException(string, Exception)
+  href: api/ShoutStats.Core.ShoutcastStreamParseException.html#ShoutStats_Core_ShoutcastStreamParseException__ctor_System_String_System_Exception_
+  commentId: M:ShoutStats.Core.ShoutcastStreamParseException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: ShoutStats.Core.ShoutcastStreamParseException.ShoutcastStreamParseException(string, System.Exception)
+  fullName.vb: ShoutStats.Core.ShoutcastStreamParseException.New(String, System.Exception)
+  nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException(string, Exception)
+  nameWithType.vb: ShoutcastStreamParseException.New(String, Exception)
 - uid: ShoutStats.Core.ShoutcastStreamParseException.#ctor*
   name: ShoutcastStreamParseException
   href: api/ShoutStats.Core.ShoutcastStreamParseException.html#ShoutStats_Core_ShoutcastStreamParseException__ctor_
   commentId: Overload:ShoutStats.Core.ShoutcastStreamParseException.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: ShoutStats.Core.ShoutcastStreamParseException.ShoutcastStreamParseException
+  fullName.vb: ShoutStats.Core.ShoutcastStreamParseException.New
   nameWithType: ShoutcastStreamParseException.ShoutcastStreamParseException
+  nameWithType.vb: ShoutcastStreamParseException.New
 - uid: ShoutStats.Core.ShoutcastVersion
   name: ShoutcastVersion
   href: api/ShoutStats.Core.ShoutcastVersion.html
