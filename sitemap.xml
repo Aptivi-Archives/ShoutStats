@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aptivi.github.io/ShoutStats/api/ShoutStats.Core.ShoutcastServer.html</loc>
-    <lastmod>2023-09-12T06:07:28+00:00</lastmod>
+    <lastmod>2023-09-12T06:41:39+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/ShoutStats/api/ShoutStats.Core.ShoutcastServerException.html</loc>
-    <lastmod>2023-09-12T06:07:28+00:00</lastmod>
+    <lastmod>2023-09-12T06:41:39+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/ShoutStats/api/ShoutStats.Core.ShoutcastStreamParseException.html</loc>
-    <lastmod>2023-09-12T06:07:28+00:00</lastmod>
+    <lastmod>2023-09-12T06:41:39+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/ShoutStats/api/ShoutStats.Core.ShoutcastVersion.html</loc>
-    <lastmod>2023-09-12T06:07:28+00:00</lastmod>
+    <lastmod>2023-09-12T06:41:39+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/ShoutStats/api/ShoutStats.Core.StreamInfo.html</loc>
-    <lastmod>2023-09-12T06:07:28+00:00</lastmod>
+    <lastmod>2023-09-12T06:41:39+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/ShoutStats/api/ShoutStats.Core.html</loc>
-    <lastmod>2023-09-12T06:07:28+00:00</lastmod>
+    <lastmod>2023-09-12T06:41:39+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aptivi.github.io/ShoutStats/index.html</loc>
-    <lastmod>2023-09-12T06:07:28+00:00</lastmod>
+    <lastmod>2023-09-12T06:41:39+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
