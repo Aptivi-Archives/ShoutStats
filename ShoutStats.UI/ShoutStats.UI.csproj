@@ -6,7 +6,9 @@
     <TrimMode>copyused</TrimMode>
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationIcon>..\ShoutStats.Console\OfficialAppIcon-ShoutStats.ico</ApplicationIcon>
-    <Version>0.1.0.4</Version>
+    <Version>0.1.0.5</Version>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\aptivi_snk.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <None Remove=".gitignore" />

@@ -4,7 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ApplicationIcon>OfficialAppIcon-ShoutStats.ico</ApplicationIcon>
-    <Version>0.1.0.4</Version>
+    <Version>0.1.0.5</Version>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\aptivi_snk.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
