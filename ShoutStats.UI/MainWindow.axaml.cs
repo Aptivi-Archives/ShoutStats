@@ -74,7 +74,7 @@ namespace ShoutStats.UI
 
                 // Get streams
                 streams = shout.Streams;
-                thisView.StreamCombo.Items = streams.Select((si) => $"{si.StreamId} - {si.StreamTitle}");
+                thisView.StreamCombo.ItemsSource = streams.Select((si) => $"{si.StreamId} - {si.StreamTitle}");
                 thisView.StreamCombo.SelectedIndex = 0;
             }
             catch (Exception ex)
