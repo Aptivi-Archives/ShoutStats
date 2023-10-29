@@ -6,17 +6,17 @@ if "%releaseconfig%" == "" set releaseconfig=Release
 
 :packbin
 echo Packing binary...
-"%ProgramFiles%\WinRAR\rar.exe" a -ep1 -r -m5 %temp%/%version%-bin.rar "..\ShoutStats.Core\bin\%releaseconfig%\netstandard2.0\"
-"%ProgramFiles%\WinRAR\rar.exe" a -ep1 -r -m5 %temp%/%version%-demo.rar "..\ShoutStats.Console\bin\%releaseconfig%\net6.0\"
-"%ProgramFiles%\WinRAR\rar.exe" a -ep1 -r -m5 %temp%/%version%-demoui.rar "..\ShoutStats.UI\bin\%releaseconfig%\net6.0\"
+"%ProgramFiles%\7-Zip\7z.exe" a -tzip %temp%/%version%-bin.zip "..\ShoutStats.Core\bin\%releaseconfig%\netstandard2.0\*"
+"%ProgramFiles%\7-Zip\7z.exe" a -tzip %temp%/%version%-demo.zip "..\ShoutStats.Console\bin\%releaseconfig%\net6.0\*"
+"%ProgramFiles%\7-Zip\7z.exe" a -tzip %temp%/%version%-demoui.zip "..\ShoutStats.UI\bin\%releaseconfig%\net6.0\*"
 if %errorlevel% == 0 goto :complete
 echo There was an error trying to pack binary (%errorlevel%).
 goto :finished
 
 :complete
-move %temp%\%version%-bin.rar
-move %temp%\%version%-demo.rar
-move %temp%\%version%-demoui.rar
+move %temp%\%version%-bin.zip
+move %temp%\%version%-demo.zip
+move %temp%\%version%-demoui.zip
 
 echo Pack successful.
 :finished
