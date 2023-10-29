@@ -42,7 +42,7 @@ namespace ShoutStats.UI
 
     public class StatsData
     {
-        private Window view;
+        private readonly Window view;
         private List<StreamInfo> streams;
         private ShoutcastServer shout;
         private string selectedStream;

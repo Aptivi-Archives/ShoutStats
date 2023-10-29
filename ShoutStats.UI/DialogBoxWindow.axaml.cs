@@ -37,7 +37,7 @@ namespace ShoutStats.UI
 
     public class DialogInfo
     {
-        private Window view;
+        private readonly Window view;
         public void Close()
         {
             view.Close();

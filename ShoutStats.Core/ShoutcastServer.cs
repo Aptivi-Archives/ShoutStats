@@ -44,7 +44,7 @@ namespace ShoutStats.Core
         private int maxListeners;
         private int uniqueListeners;
         private int averageTime;
-        private List<StreamInfo> streams = new List<StreamInfo>();
+        private readonly List<StreamInfo> streams = new List<StreamInfo>();
         internal JToken streamToken;
         internal HtmlDocument streamHtmlToken = new HtmlDocument();
         internal HttpClient client = new HttpClient();

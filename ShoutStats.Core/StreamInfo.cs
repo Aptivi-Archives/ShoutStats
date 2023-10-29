@@ -32,29 +32,29 @@ namespace ShoutStats.Core
     /// </summary>
     public class StreamInfo
     {
-        private int currentListeners;
-        private int peakListeners;
-        private int maxListeners;
-        private int uniqueListeners;
-        private int averageTime;
-        private int streamId;
-        private string streamGenre;
-        private string streamGenre2;
-        private string streamGenre3;
-        private string streamGenre4;
-        private string streamGenre5;
-        private string streamHomepage;
-        private string streamTitle;
-        private string songTitle;
-        private long streamHits;
-        private int streamStatus;
-        private int backupStatus;
-        private bool streamListed;
-        private string streamPath;
-        private long streamUptime;
-        private int bitRate;
-        private int sampleRate;
-        private string mimeInfo;
+        private readonly int currentListeners;
+        private readonly int peakListeners;
+        private readonly int maxListeners;
+        private readonly int uniqueListeners;
+        private readonly int averageTime;
+        private readonly int streamId;
+        private readonly string streamGenre;
+        private readonly string streamGenre2;
+        private readonly string streamGenre3;
+        private readonly string streamGenre4;
+        private readonly string streamGenre5;
+        private readonly string streamHomepage;
+        private readonly string streamTitle;
+        private readonly string songTitle;
+        private readonly long streamHits;
+        private readonly int streamStatus;
+        private readonly int backupStatus;
+        private readonly bool streamListed;
+        private readonly string streamPath;
+        private readonly long streamUptime;
+        private readonly int bitRate;
+        private readonly int sampleRate;
+        private readonly string mimeInfo;
 
         /// <summary>
         /// Stream ID starting from number one (1)
