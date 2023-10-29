@@ -140,25 +140,7 @@ namespace ShoutStats.Core
         {
             try
             {
-                // Use the full address to download the statistics. Note that Shoutcast v2 streams will use the /statistics directory, which provides
-                // more information than /7.html. If we're dealing with the first version, or if /statistics is disabled for some reason, fallback to
-                // /7.html
-                Uri statisticsUri = new Uri(ServerHostFull + "/statistics?json=1");
-                Uri fallbackUri = new Uri(ServerHostFull + "/7.html");
-                string serverResponse = client.GetStringAsync(statisticsUri).Result;
-
-                // Shoutcast v1.x doesn't have /statistics...
-                if (serverResponse.Contains("Invalid resource"))
-                {
-                    // Detected v1. Fallback to /7.html
-                    serverVersion = ShoutcastVersion.v1;
-                    serverResponse = client.GetStringAsync(fallbackUri).Result;
-                    streamHtmlToken.LoadHtml(serverResponse);
-                }
-                else
-                {
-                    streamToken = JToken.Parse(serverResponse);
-                }
+                InitializeStatsAsync().RunSynchronously();
 
                 // Determine version of Shoutcast
                 if (serverVersion == ShoutcastVersion.v1)
@@ -179,25 +161,7 @@ namespace ShoutStats.Core
         {
             try
             {
-                // Use the full address to download the statistics. Note that Shoutcast v2 streams will use the /statistics directory, which provides
-                // more information than /7.html. If we're dealing with the first version, or if /statistics is disabled for some reason, fallback to
-                // /7.html
-                Uri statisticsUri = new Uri(ServerHostFull + "/statistics?json=1");
-                Uri fallbackUri = new Uri(ServerHostFull + "/7.html");
-                string serverResponse = await client.GetStringAsync(statisticsUri);
-
-                // Shoutcast v1.x doesn't have /statistics...
-                if (serverResponse.Contains("Invalid resource"))
-                {
-                    // Detected v1. Fallback to /7.html
-                    serverVersion = ShoutcastVersion.v1;
-                    serverResponse = await client.GetStringAsync(fallbackUri);
-                    streamHtmlToken.LoadHtml(serverResponse);
-                }
-                else
-                {
-                    streamToken = JToken.Parse(serverResponse);
-                }
+                await InitializeStatsAsync();
 
                 // Determine version of Shoutcast
                 if (serverVersion == ShoutcastVersion.v1)
@@ -208,6 +172,29 @@ namespace ShoutStats.Core
             catch (Exception ex)
             {
                 throw new ShoutcastServerException($"Failed to parse Shoutcast server {ServerHost}. More information can be found in the inner exception.", ex);
+            }
+        }
+
+        internal async Task InitializeStatsAsync()
+        {
+            // Use the full address to download the statistics. Note that Shoutcast v2 streams will use the /statistics directory, which provides
+            // more information than /7.html. If we're dealing with the first version, or if /statistics is disabled for some reason, fallback to
+            // /7.html
+            Uri statisticsUri = new Uri(ServerHostFull + "/statistics?json=1");
+            Uri fallbackUri = new Uri(ServerHostFull + "/7.html");
+            string serverResponse = await client.GetStringAsync(statisticsUri);
+
+            // Shoutcast v1.x doesn't have /statistics...
+            if (serverResponse.Contains("Invalid resource"))
+            {
+                // Detected v1. Fallback to /7.html
+                serverVersion = ShoutcastVersion.v1;
+                serverResponse = await client.GetStringAsync(fallbackUri);
+                streamHtmlToken.LoadHtml(serverResponse);
+            }
+            else
+            {
+                streamToken = JToken.Parse(serverResponse);
             }
         }
 
