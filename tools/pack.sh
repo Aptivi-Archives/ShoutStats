@@ -17,8 +17,8 @@ fi
 # Pack binary
 echo Packing binary...
 cd "../ShoutStats.Core/bin/$releaseconf/netstandard2.0/" && "$zippath" -r /tmp/$version-bin.zip . && cd -
-cd "../ShoutStats.Console/bin/$releaseconf/net6.0/" && "$zippath" -r /tmp/$version-bin.zip . && cd -
-cd "../ShoutStats.UI/bin/$releaseconf/net6.0/" && "$zippath" -r /tmp/$version-bin.zip . && cd -
+cd "../ShoutStats.Console/bin/$releaseconf/net8.0/" && "$zippath" -r /tmp/$version-bin.zip . && cd -
+cd "../ShoutStats.UI/bin/$releaseconf/net8.0/" && "$zippath" -r /tmp/$version-bin.zip . && cd -
 if [ ! $? == 0 ]; then
 	echo Packing using zip failed.
 	exit 1
